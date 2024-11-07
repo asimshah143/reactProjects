@@ -42,51 +42,51 @@ function App() {
 
   return (
     <>  
-    <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 bg-gray-700 border border-gray-600">
-      <h1 className='text-white font-bold my-3'>Password Generator</h1>
-      <div className='flex shadow rounded-lg overflow-hidden my-3'>
-        <input
-        type='text'
-        value={Passward}
-        className='outline-none w-full py-1 px-3'
-        placeholder='password'
-        readOnly
-        ref={passwordRef}
-        />
-        <button className='outline-none bg-blue-600 px-3 py-2 text-white' 
-        onClick={copyPasswordToClipboard}>copy</button>    
-      </div>
-      <div className=" flex text-sm gap-x-2 text-orange-400">
-        <div className="flex  item-center gap-x-1">
+      <div className="w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 bg-gray-700 border border-gray-600">
+        <h1 className='text-white font-bold my-3'>Password Generator</h1>
+        <div className='flex shadow rounded-lg overflow-hidden my-3'>
           <input
-            type="range"
-            min={6}
-            max={100}
-            value={length}
-            // className='cursor-pointer'
-           onChange={(e) => {setLength(e.target.value)}}
+          type='text'
+          value={Passward}
+          className='outline-none w-full py-1 px-3'
+          placeholder='password'
+          readOnly
+          ref={passwordRef}
           />
-          <label>Numbers: {length}</label>
+          <button className='outline-none bg-blue-600 px-3 py-2 text-white' 
+          onClick={copyPasswordToClipboard}>copy</button>    
         </div>
-        <div className="flex  item-center gap-x-1">
-          <input
-            type="checkbox"
-            defaultChecked={numberAllowed}
-            id='numberInput'
-            onChange={() => {setNumberAllowed((prev) => !prev)}} // reverse value true to false and false to true 
-          />
-          <label>Numbers</label>
+        <div className=" flex text-sm gap-x-2 text-orange-400">
+          <div className="flex  item-center gap-x-1">
+            <input
+              type="range"
+              min={6}
+              max={100}
+              value={length}
+              // className='cursor-pointer'
+            onChange={(e) => {setLength(e.target.value)}}
+            />
+            <label>Numbers: {length}</label>
+          </div>
+          <div className="flex  item-center gap-x-1">
+            <input
+              type="checkbox"
+              defaultChecked={numberAllowed}
+              id='numberInput'
+              onChange={() => {setNumberAllowed((prev) => !prev)}} // reverse value true to false and false to true 
+            />
+            <label>Numbers</label>
+          </div>
+          <div className="flex  item-center gap-x-1">
+            <input
+              type="checkbox"
+              defaultChecked={charAllowed}
+              id='numberInput'
+              onChange={() => {setCharAllowed((prev) => !prev)}} // reverse value true to false and false to true 
+            />
+            <label>Character</label>
+          </div>
         </div>
-        <div className="flex  item-center gap-x-1">
-          <input
-            type="checkbox"
-            defaultChecked={charAllowed}
-            id='numberInput'
-            onChange={() => {setCharAllowed((prev) => !prev)}} // reverse value true to false and false to true 
-          />
-          <label>Character</label>
-        </div>
-      </div>
       </div>
     </> 
   )
