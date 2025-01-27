@@ -7,10 +7,10 @@ function TodoItem({ todo }) {
     // take a name of todo in message 
     const [todoMsg, setTodoMsg] = useState(todo.todo);
     ///todo list
-    const {upateTodo, deleteTodo, toggleComplete} = useTodo
+    const {deleteTodo, updatedTodo,  toggleComplete} = useTodo();
 
     const editTodo = () => {
-        upateTodo(todo.id, {...todo, todo: todoMsg });
+        updatedTodo(todo.id, {...todo, todo: todoMsg });
         setIsTodoEditable(false);
     }
 
