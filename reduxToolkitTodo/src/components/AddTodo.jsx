@@ -4,6 +4,7 @@ import {addTodo} from '../features/todo/todoSlice'
 
 function AddTodo() {
     const [input, setInput] = useState("")
+    //useDispatch to dispatch the action
     const dispatch = useDispatch()
 
     const addTodoHandler = (e) => {
